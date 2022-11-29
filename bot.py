@@ -57,7 +57,7 @@ def fetch_and_send(ctx: CallbackContext):
     with requests.Session() as s:
         resp = s.get(SS_GE_URL)
 
-    soup = BeautifulSoup(resp.text)
+    soup = BeautifulSoup(resp.text, "html.parser")
     r = Redis()
 
     for listing in list(soup.find_all(class_="latest_article_each_in"))[:1]:
