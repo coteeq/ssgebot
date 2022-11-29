@@ -14,7 +14,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 
-CHECK_INTERVAL: int = 15 * 60  # 15 min
+CHECK_INTERVAL: int = 5 * 60  # 15 min
 CHAT_ID = None
 SS_GE_URL = (
     "https://ss.ge/en/real-estate/l/Flat/For-Rent"
