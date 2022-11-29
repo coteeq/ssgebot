@@ -60,7 +60,7 @@ def fetch_and_send(ctx: CallbackContext):
     soup = BeautifulSoup(resp.text, "html.parser")
     r = Redis()
 
-    for listing in list(soup.find_all(class_="latest_article_each_in"))[:1]:
+    for listing in list(soup.find_all(class_="latest_article_each_in")):
         listing = listing.find_all(class_="DesktopArticleLayout")[0]
 
         link = listing.div.a["href"]
